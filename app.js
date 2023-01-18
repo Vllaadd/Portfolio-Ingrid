@@ -3,6 +3,8 @@ const exphbs = require("express-handlebars");
 const app = express();
 const path = require("path");
 
+app.use(express.static(path.join(__dirname, "/public")));
+
 app.set("views", path.join(__dirname, "views"));
 app.engine(".hbs", exphbs.engine({
     extname: ".hbs",
