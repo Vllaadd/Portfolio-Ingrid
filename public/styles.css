@@ -1,3 +1,9 @@
+@font-face {
+    font-family: fontLight;
+    src: url(fonts/Futura\ Bold.ttf);
+}
+
 body{
     background-color: #ff0;
+    font-family: fontLight;
 }
