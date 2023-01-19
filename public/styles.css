@@ -1,7 +1,19 @@
 @font-face {
     font-family: fontLight;
-    src:url(/public/fonts/Futura\ Bold.ttf)
+    src:url(/public/fonts/Futura\ Thin.ttf)
 }
+
+
+@font-face {
+    font-family: brandonBold;
+    src: url(fonts/BrandonGrotesque-Bold.otf);
+}
+
+@font-face {
+    font-family: brandonLigt;
+    src: url(fonts/Brandon_light.otf);
+}
+
 
 body{
     background-color: #ff0;
