@@ -1,6 +1,6 @@
 @font-face {
     font-family: fontLight;
-    src: url(fonts/Futura\ Bold.ttf);
+    src:url(/public/fonts/Futura\ Bold.ttf)
 }
 
 body{
