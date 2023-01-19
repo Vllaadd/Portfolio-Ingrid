@@ -15,6 +15,7 @@
         <a class="name" href="/">Ingrid Zippe</a>
         <i id="bars" class="fa-sharp fa-solid fa-bars" onclick="openMenu()"></i>
     </div>
+    <div id="menu-overlay"></div>
     <div id="menu-slide" class="menu-slide">
         <a href="javascript:void(0)" class="menu-x" onclick="closeMenu()">&times;</a>
         <a href="/work">work</a>
@@ -27,10 +28,12 @@
     function openMenu(){
         const divMenuSlide = document.getElementById("menu-slide");
         divMenuSlide.style.width = "300px";
+        document.getElementById("menu-overlay").style.with ="100%";
     }
 
     function closeMenu(){
         const divMenuSlide = document.getElementById("menu-slide");
         divMenuSlide.style.width = "0px";
+        document.getElementById("menu-overlay").style.with ="100%";
     }
 </script>
