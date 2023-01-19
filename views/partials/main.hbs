@@ -28,12 +28,13 @@
     function openMenu(){
         const divMenuSlide = document.getElementById("menu-slide");
         divMenuSlide.style.width = "300px";
-        document.getElementById("menu-overlay").style.with ="100%";
+        document.getElementById("menu-overlay").style.width = "100%";
     }
 
     function closeMenu(){
         const divMenuSlide = document.getElementById("menu-slide");
         divMenuSlide.style.width = "0px";
-        document.getElementById("menu-overlay").style.with ="100%";
+        document.getElementById("menu-slide").style.with ="0";
+        document.getElementById("menu-overlay").style.with ="0";
     }
 </script>
