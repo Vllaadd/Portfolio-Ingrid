@@ -57,7 +57,7 @@ body{
 
 .menu-slide{
     height: 100%;
-    width: 300;
+    width: 0;
     position: fixed;
     z-index: 20;
     top: 0;
