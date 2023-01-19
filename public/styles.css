@@ -41,3 +41,54 @@ body{
     color: black;
     letter-spacing: 0.5px;
 }
+
+#bars{
+    color: #7f7d78;
+    position: absolute;
+    top: 22px;
+    right: 21px;
+    font-size: 20px;
+}
+
+#bars:hover{
+    color: #8de8db;
+
+}
+
+.menu-slide{
+    height: 100%;
+    width: 300;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    transition: 0.5s;
+    padding-top: 60px;
+    overflow: hidden;
+}
+
+.menu-slide a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 23px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-family: brandonLight;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.menu-slide a:hover{
+    color: #f1f1f1;
+}
+
+.menu-slide .menu-x{
+    padding: 0px 0px 0px 20px;
+    margin-top: 0px;
+    position: absolute;
+    top: 0;
+    right: 16px;
+    margin-left: 50px;
+}
