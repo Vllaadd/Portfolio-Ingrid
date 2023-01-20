@@ -14,7 +14,10 @@ app.set("view engine", ".hbs");
 
 
 app.get("/", function(req, res){
-    res.render("home.hbs");
+    res.render("home");
+})
+app.get("/contact", function(req, res){
+    res.render("contact");
 })
 
 const port = process.env.PORT || 8080;
