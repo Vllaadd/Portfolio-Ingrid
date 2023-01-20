@@ -175,3 +175,56 @@ body{
 .typewriter-2 h1{
     animation-delay: 4s;
 }
+
+a{
+    text-decoration: none;
+}
+
+.footer{
+    color: #333333;
+    background-color: #fff;
+}
+
+.grey-links{
+    background-color: #fafafa;
+    height: 192px;
+    padding-top: 55px;
+    padding-left: 8%;
+}
+
+.linkedin-block{
+    text-align: right;
+    background-color: #fff;
+    margin: auto;
+    height: 63px;
+    text-align: right;
+}
+#linked-logo{
+    color: #333333;
+    font-size: 20px;
+    padding: 28px;
+    padding-left: 40px;
+}
+#linkdin-logo{
+    color: #adeadb;
+}
+.pages{
+    text-transform: uppercase;
+    color: #36cdd6;
+    font-family: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    line-height: 18px;
+}
+.grey-link{
+    color: #333333;
+    font-family: brandonLight;
+    font-weight: 400px;
+    font-size: 17px;
+    line-height: 36.5px;
+}
+
+.grey-link:hover{
+    color: #89dcd9;
+}
