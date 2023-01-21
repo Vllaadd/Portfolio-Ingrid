@@ -26,6 +26,8 @@ app.get("/contact", function(req, res){
 app.post("/contact", function(req, res, next){
     console.log("contact form posted");
     console.log(req.body);
+    console.log(req.body.fullname);
+    console.log(req.body.email);
 })
 
 const port = process.env.PORT || 8080;
