@@ -2,7 +2,10 @@ const express = require('express');
 const exphbs = require("express-handlebars");
 const app = express();
 const path = require("path");
+const bodyParser = require("body-parser");
 
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "/public")));
 
 app.set("views", path.join(__dirname, "views"));
@@ -18,6 +21,11 @@ app.get("/", function(req, res){
 })
 app.get("/contact", function(req, res){
     res.render("contact");
+})
+
+app.post("/contact", function(req, res, next){
+    console.log("contact form posted");
+    console.log(req.body);
 })
 
 const port = process.env.PORT || 8080;
