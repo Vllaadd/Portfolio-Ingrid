@@ -1,8 +1,10 @@
+require("dotenv").config();
 const express = require('express');
 const exphbs = require("express-handlebars");
 const app = express();
 const path = require("path");
 const bodyParser = require("body-parser");
+const nodemailer = require("nodemailer");
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -21,6 +23,15 @@ app.get("/", function(req, res){
 })
 app.get("/contact", function(req, res){
     res.render("contact");
+})
+
+//step 1: transporter 
+const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+        user: process.env.EMAIL,
+        password: process.env.PASSWORD
+    }
 })
 
 app.post("/contact", function(req, res, next){
