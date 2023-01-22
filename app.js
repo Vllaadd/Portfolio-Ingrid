@@ -45,7 +45,7 @@ app.post("/contact", function(req, res, next){
 //step 2:
     const mailOptions = {
         from: "vladzizic@gmail.com",
-        to: "vladzizic@gmail.com",
+        to: "z.vladd@gmail.com",
         subject: req.body.subject,
         text: req.body.note,
         html: "<b>Full name</b>" + name + "<b>Email </>" + email + "<b>Message</b>" + note
@@ -55,7 +55,8 @@ transporter.sendMail(mailOptions, function(err, data){
     if(err){
         console.log("error sending email");
     }else{
-        console.log("Email sent!")
+        console.log("Email sent!");
+        res.render("contact", {submitted: "yes"});
     }
 })
 })

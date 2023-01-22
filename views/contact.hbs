@@ -21,11 +21,22 @@
             <input type="text" id="subject" name="subject" placeholder="Subject...">
             <div class="contact-label">Subject</div>
             <textarea rows="5" id="note" name="note" placeholder="Your note..."></textarea>
-            <input type="submit" value="Submit" onclick="hideContact()">
+            <input type="submit" value="Submit">
         </form>
         <div id="contact-thankyou">Good to be in touch! I'll get back to you shortly.</div>
+        <div id="submitted">{submitted} </div>
     </div>
     {{>footer}}
+    <script>
+        console.log(document.getElementById("submitted").innerHTML);
+        const submitted = document.getElementById("submitted").innerHTML;
+        if(submitted == "yes"){
+            const contactForm = document.getElementById("contact-form");
+            const contactThanks = document.getElementById("contact-thankyou");
+            contactForm.style.display = "none";
+            contactThanks.style.display = "block";
+        }
+    </script>
 </body>
 
 </html>
