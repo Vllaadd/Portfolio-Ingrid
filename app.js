@@ -1,10 +1,11 @@
 require("dotenv").config();
+const nodemailer = require("nodemailer");
 const express = require('express');
 const exphbs = require("express-handlebars");
 const app = express();
 const path = require("path");
 const bodyParser = require("body-parser");
-const nodemailer = require("nodemailer");
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -30,15 +31,33 @@ const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
         user: process.env.EMAIL,
-        password: process.env.PASSWORD
+        pass: process.env.PASSWORD
     }
 })
 
 app.post("/contact", function(req, res, next){
     console.log("contact form posted");
     console.log(req.body);
-    console.log(req.body.fullname);
-    console.log(req.body.email);
+    const name = req.body.fullname;
+    const email = req.body.email;
+    const note = req.body.note;
+    const subject = req.body.subject;
+//step 2:
+    const mailOptions = {
+        from: "vladzizic@gmail.com",
+        to: "vladzizic@gmail.com",
+        subject: req.body.subject,
+        text: req.body.note,
+        html: "<b>Full name</b>" + name + "<b>Email </>" + email + "<b>Message</b>" + note
+    }
+//step 3
+transporter.sendMail(mailOptions, function(err, data){
+    if(err){
+        console.log("error sending email");
+    }else{
+        console.log("Email sent!")
+    }
+})
 })
 
 const port = process.env.PORT || 8080;
